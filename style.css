@@ -12,10 +12,75 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.all-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1000px;
+}
+main {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
+.nav-button {
+  margin: 1rem 0.5rem 0 0;
+}
+.nav-button button {
+  align-items: center;
+  appearance: none;
+  background-color: #c8d6e5;
+  border-radius: 20px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bfbfd7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'JetBrains Mono', monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.nav-button button:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #babad2 0 -3px 0 inset;
+}
+.nav-button button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #bdbdd0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.nav-button button:active {
+  box-shadow: #babace 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.nav-button a {
+  text-decoration: none;
+  color: #000;
+}
 .container {
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
   border-radius: 25px;
   overflow: hidden;
   perspective: 1px;
@@ -228,11 +293,20 @@ p {
   }
 }
 @media screen and (max-width: 450px) {
+  body {
+    background-color: #c8d6e5;
+  }
   .project-links {
     width: 100%;
   }
   .interest {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .all-container {
+    align-items: center;
+  }
+  .nav-button {
+    margin: 0.5rem;
   }
 }
